@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="loginApp.User" table="USER">
+	<meta attribute="class-description">
+	This class contains the course details.
+	</meta>
+	<id name="id" column="USER_ID">
+		<generator class="increment"/>
+	</id>
+	<property name="username" type="string" column="USER_NAME" not-null ="true"/>
+	<property name="password" type="string" column="USER_PASS" not-null="true"/>
+	<property name="email" type="string" column="USER_EMAIL" not-null="true"/>
+</class>
+
+</hibernate-mapping>
